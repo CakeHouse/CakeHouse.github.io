@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="zxx">
 
 <head>
@@ -25,13 +25,8 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <!-- responsive -->
     <link rel="stylesheet" href="assets/css/responsive.css">
-
-	<link href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-    <link href="http://wenzhixin.net.cn/p/bootstrap-table/src/bootstrap-table.css" rel="stylesheet" type="text/css" />
-
-    <link href="http://cdn.kendostatic.com/2014.1.318/styles/kendo.common.min.css" rel="stylesheet" />
-    <link href="http://cdn.kendostatic.com/2014.1.318/styles/kendo.bootstrap.min.css" rel="stylesheet" />
-    <link href="http://protostrap.com/Assets/gv/css/gv.bootstrap-form.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://www.jquery-az.com/boots/js/bootstrap-filestyle.min.js"> </script>
 
 </head>
 
@@ -142,7 +137,9 @@
                                             </a>
                                             <div class="dropdown-menu" aria-labelledby="navbarDropdown3">
                                                 <a class="dropdown-item" href="register.html">Employee</a>
-
+                                                <a class="dropdown-item" href="register-2.html">Student</a>
+                                                <a class="dropdown-item" href="register-2.html">Employer</a>
+                                                <a class="dropdown-item" href="register-2.html">Investor</a>
                                             </div>
                                         </li>
                                         <li class="nav-item">
@@ -176,176 +173,445 @@
 
     <!-- register-1 begin-->
 
+    <div class="login register">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+<style>
+.form-group{
+ margin-bottom: 15px;
+}
+label{
+ margin-bottom: 15px;
+}
+input,
+input::-webkit-input-placeholder {
+ font-size: 11px;
+ padding-top: 3px;
+}
+.form-control {
+ height: auto!important;
+padding: 8px 12px !important;
+}
+.input-group {
+ box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.21)!important;
+}
+#button {
+ border: 1px solid #ccc;
+ margin-top: 28px;
+ padding: 6px 12px;
+ color: #666;
+ text-shadow: 0 1px #fff;
+ cursor: pointer;
+ border-radius: 3px 3px;
+ box-shadow: 0 1px #fff inset, 0 1px #ddd;
+ background: #f5f5f5;
+ background: -moz-linear-gradient(top, #f5f5f5 0%, #eeeeee 100%);
+ background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f5f5f5), color-stop(100%, #eeeeee));
+ background: -webkit-linear-gradient(top, #f5f5f5 0%, #eeeeee 100%);
+ background: -o-linear-gradient(top, #f5f5f5 0%, #eeeeee 100%);
+ background: -ms-linear-gradient(top, #f5f5f5 0%, #eeeeee 100%);
+ background: linear-gradient(top, #f5f5f5 0%, #eeeeee 100%);
+ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f5f5f5', endColorstr='#eeeeee', GradientType=0);
+}
+.main-form{
+ margin-top: 30px;
+ margin: 0 auto;
+ max-width: 800px;
+ padding: 10px 40px;
+background:#4b5380;
+color: #FFF;
+text-shadow: none;
+box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.31);
+text-align:center
+}
+span.input-group-addon i {
+ color: #009edf;
+ font-size: 17px;
+}
+.login-button{
+ margin-top: 5px;
+}
+</style>
+
+ <div class="container">
+ <div class="row main-form justify-content-center">
+ <form class="" method="post" action="#">
+
+ <div class="form-group">
+ <label for="name" class="cols-sm-2 control-label">Your Name</label>
+ <div class="cols-sm-10">
+ <div class="input-group">
+ <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+ <input type="text" class="form-control" name="name" id="name" placeholder=" First Name"/>
+ </div>
+ </div>
+ </div>
+
+ <div class="form-group">
+ <div class="cols-sm-10">
+ <div class="input-group">
+ <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+ <input type="text" class="form-control" name="name" id="name" placeholder="Last Name"/>
+ </div>
+ </div>
+ </div>
+
+ <div class="form-group">
+ <label for="email" class="cols-sm-2 control-label">Your Email</label>
+ <div class="cols-sm-10">
+ <div class="input-group">
+ <span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
+ <input type="text" class="form-control" name="email" id="email" placeholder="Enter your Email"/>
+ </div>
+ </div>
+ </div>
+
+ <div class="form-group">
+ <label for="email" class="cols-sm-2 control-label">Contact Number</label>
+ <div class="cols-sm-10">
+ <div class="input-group col-auto">
+ <span class="input-group-addon"><i class="fa fa-phone-square" aria-hidden="true"></i></span>
+ <input type="text" class="form-control" name="email" id="email" placeholder="(___)___ __ __"/>
+ </div>
+ </div>
+ </div>
+
+ <div class="form-group">
+ <label for="name" class="cols-sm-2 control-label">Address</label>
+ <div class="cols-sm-10">
+ <div class="input-group">
+ <span class="input-group-addon"><i class="fa fa-address-card" aria-hidden="true"></i></span>
+ <input type="text" class="form-control" name="name" id="name" placeholder=" Street Address"/>
+ </div>
+ </div>
+ </div>
+
+ <div class="form-group">
+ <div class="cols-sm-10">
+ <div class="input-group">
+ <span class="input-group-addon"><i class="fa fa-address-card" aria-hidden="true"></i></span>
+ <input type="text" class="form-control" name="name" id="name" placeholder="City"/>
+ </div>
+ </div>
+ </div>
+
+ <div class="form-group">
+ <div class="cols-sm-10">
+ <div class="input-group">
+ <span class="input-group-addon"><i class="fa fa-address-card" aria-hidden="true"></i></span>
+ <input type="text" class="form-control" name="name" id="name" placeholder="State / Province"/>
+ </div>
+ </div>
+ </div>
+
+ <div class="form-group">
+ <div class="cols-sm-10">
+ <div class="input-group">
+ <span class="input-group-addon"><i class="fa fa-globe" aria-hidden="true"></i></span>
+
+ <select class="form-control" id="select">
+  <option selected value>Country</option>
+  <option value="NL">NETHERLANDS</option>
+ 	<option value="AN">NETHERLANDS ANTILLES</option>
+	<option value="AX">AALAND ISLANDS</option>
+	<option value="AF">AFGHANISTAN</option>
+	<option value="AL">ALBANIA</option>
+	<option value="DZ">ALGERIA</option>
+	<option value="AS">AMERICAN SAMOA</option>
+	<option value="AD">ANDORRA</option>
+	<option value="AO">ANGOLA</option>
+	<option value="AI">ANGUILLA</option>
+	<option value="AQ">ANTARCTICA</option>
+	<option value="AG">ANTIGUA AND BARBUDA</option>
+	<option value="AR">ARGENTINA</option>
+	<option value="AM">ARMENIA</option>
+	<option value="AW">ARUBA</option>
+	<option value="AU">AUSTRALIA</option>
+	<option value="AT">AUSTRIA</option>
+	<option value="AZ">AZERBAIJAN</option>
+	<option value="BS">BAHAMAS</option>
+	<option value="BH">BAHRAIN</option>
+	<option value="BD">BANGLADESH</option>
+	<option value="BB">BARBADOS</option>
+	<option value="BY">BELARUS</option>
+	<option value="BE">BELGIUM</option>
+	<option value="BZ">BELIZE</option>
+	<option value="BJ">BENIN</option>
+	<option value="BM">BERMUDA</option>
+	<option value="BT">BHUTAN</option>
+	<option value="BO">BOLIVIA</option>
+	<option value="BA">BOSNIA AND HERZEGOWINA</option>
+	<option value="BW">BOTSWANA</option>
+	<option value="BV">BOUVET ISLAND</option>
+	<option value="BR">BRAZIL</option>
+	<option value="IO">BRITISH INDIAN OCEAN TERRITORY</option>
+	<option value="BN">BRUNEI DARUSSALAM</option>
+	<option value="BG">BULGARIA</option>
+	<option value="BF">BURKINA FASO</option>
+	<option value="BI">BURUNDI</option>
+	<option value="KH">CAMBODIA</option>
+	<option value="CM">CAMEROON</option>
+	<option value="CA">CANADA</option>
+	<option value="CV">CAPE VERDE</option>
+	<option value="KY">CAYMAN ISLANDS</option>
+	<option value="CF">CENTRAL AFRICAN REPUBLIC</option>
+	<option value="TD">CHAD</option>
+	<option value="CL">CHILE</option>
+	<option value="CN">CHINA</option>
+	<option value="CX">CHRISTMAS ISLAND</option>
+	<option value="CO">COLOMBIA</option>
+	<option value="KM">COMOROS</option>
+	<option value="CK">COOK ISLANDS</option>
+	<option value="CR">COSTA RICA</option>
+	<option value="CI">COTE D'IVOIRE</option>
+	<option value="CU">CUBA</option>
+	<option value="CY">CYPRUS</option>
+	<option value="CZ">CZECH REPUBLIC</option>
+	<option value="DK">DENMARK</option>
+	<option value="DJ">DJIBOUTI</option>
+	<option value="DM">DOMINICA</option>
+	<option value="DO">DOMINICAN REPUBLIC</option>
+	<option value="EC">ECUADOR</option>
+	<option value="EG">EGYPT</option>
+	<option value="SV">EL SALVADOR</option>
+	<option value="GQ">EQUATORIAL GUINEA</option>
+	<option value="ER">ERITREA</option>
+	<option value="EE">ESTONIA</option>
+	<option value="ET">ETHIOPIA</option>
+	<option value="FO">FAROE ISLANDS</option>
+	<option value="FJ">FIJI</option>
+	<option value="FI">FINLAND</option>
+	<option value="FR">FRANCE</option>
+	<option value="GF">FRENCH GUIANA</option>
+	<option value="PF">FRENCH POLYNESIA</option>
+	<option value="TF">FRENCH SOUTHERN TERRITORIES</option>
+	<option value="GA">GABON</option>
+	<option value="GM">GAMBIA</option>
+	<option value="GE">GEORGIA</option>
+	<option value="DE">GERMANY</option>
+	<option value="GH">GHANA</option>
+	<option value="GI">GIBRALTAR</option>
+	<option value="GR">GREECE</option>
+	<option value="GL">GREENLAND</option>
+	<option value="GD">GRENADA</option>
+	<option value="GP">GUADELOUPE</option>
+	<option value="GU">GUAM</option>
+	<option value="GT">GUATEMALA</option>
+	<option value="GN">GUINEA</option>
+	<option value="GW">GUINEA-BISSAU</option>
+	<option value="GY">GUYANA</option>
+	<option value="HT">HAITI</option>
+	<option value="HM">HEARD AND MC DONALD ISLANDS</option>
+	<option value="HN">HONDURAS</option>
+	<option value="HK">HONG KONG</option>
+	<option value="HU">HUNGARY</option>
+	<option value="IS">ICELAND</option>
+	<option value="IN">INDIA</option>
+	<option value="ID">INDONESIA</option>
+	<option value="IQ">IRAQ</option>
+	<option value="IE">IRELAND</option>
+	<option value="IL">ISRAEL</option>
+	<option value="IT">ITALY</option>
+	<option value="JM">JAMAICA</option>
+	<option value="JP">JAPAN</option>
+	<option value="JO">JORDAN</option>
+	<option value="KZ">KAZAKHSTAN</option>
+	<option value="KE">KENYA</option>
+	<option value="KI">KIRIBATI</option>
+	<option value="KW">KUWAIT</option>
+	<option value="KG">KYRGYZSTAN</option>
+	<option value="LA">LAO PEOPLE'S DEMOCRATIC REPUBLIC</option>
+	<option value="LV">LATVIA</option>
+	<option value="LB">LEBANON</option>
+	<option value="LS">LESOTHO</option>
+	<option value="LR">LIBERIA</option>
+	<option value="LY">LIBYAN ARAB JAMAHIRIYA</option>
+	<option value="LI">LIECHTENSTEIN</option>
+	<option value="LT">LITHUANIA</option>
+	<option value="LU">LUXEMBOURG</option>
+	<option value="MO">MACAU</option>
+	<option value="MG">MADAGASCAR</option>
+	<option value="MW">MALAWI</option>
+	<option value="MY">MALAYSIA</option>
+	<option value="MV">MALDIVES</option>
+	<option value="ML">MALI</option>
+	<option value="MT">MALTA</option>
+	<option value="MH">MARSHALL ISLANDS</option>
+	<option value="MQ">MARTINIQUE</option>
+	<option value="MR">MAURITANIA</option>
+	<option value="MU">MAURITIUS</option>
+	<option value="YT">MAYOTTE</option>
+	<option value="MX">MEXICO</option>
+	<option value="MC">MONACO</option>
+	<option value="MN">MONGOLIA</option>
+	<option value="MS">MONTSERRAT</option>
+	<option value="MA">MOROCCO</option>
+	<option value="MZ">MOZAMBIQUE</option>
+	<option value="MM">MYANMAR</option>
+	<option value="NA">NAMIBIA</option>
+	<option value="NR">NAURU</option>
+	<option value="NP">NEPAL</option>
+	<option value="NC">NEW CALEDONIA</option>
+	<option value="NZ">NEW ZEALAND</option>
+	<option value="NI">NICARAGUA</option>
+	<option value="NE">NIGER</option>
+	<option value="NG">NIGERIA</option>
+	<option value="NU">NIUE</option>
+	<option value="NF">NORFOLK ISLAND</option>
+	<option value="MP">NORTHERN MARIANA ISLANDS</option>
+	<option value="NO">NORWAY</option>
+	<option value="OM">OMAN</option>
+	<option value="PK">PAKISTAN</option>
+	<option value="PW">PALAU</option>
+	<option value="PA">PANAMA</option>
+	<option value="PG">PAPUA NEW GUINEA</option>
+	<option value="PY">PARAGUAY</option>
+	<option value="PE">PERU</option>
+	<option value="PH">PHILIPPINES</option>
+	<option value="PN">PITCAIRN</option>
+	<option value="PL">POLAND</option>
+	<option value="PT">PORTUGAL</option>
+	<option value="PR">PUERTO RICO</option>
+	<option value="QA">QATAR</option>
+	<option value="RE">REUNION</option>
+	<option value="RO">ROMANIA</option>
+	<option value="RU">RUSSIAN FEDERATION</option>
+	<option value="RW">RWANDA</option>
+	<option value="SH">SAINT HELENA</option>
+	<option value="KN">SAINT KITTS AND NEVIS</option>
+	<option value="LC">SAINT LUCIA</option>
+	<option value="PM">SAINT PIERRE AND MIQUELON</option>
+	<option value="VC">SAINT VINCENT AND THE GRENADINES</option>
+	<option value="WS">SAMOA</option>
+	<option value="SM">SAN MARINO</option>
+	<option value="ST">SAO TOME AND PRINCIPE</option>
+	<option value="SA">SAUDI ARABIA</option>
+	<option value="SN">SENEGAL</option>
+	<option value="CS">SERBIA AND MONTENEGRO</option>
+	<option value="SC">SEYCHELLES</option>
+	<option value="SL">SIERRA LEONE</option>
+	<option value="SG">SINGAPORE</option>
+	<option value="SK">SLOVAKIA</option>
+	<option value="SI">SLOVENIA</option>
+	<option value="SB">SOLOMON ISLANDS</option>
+	<option value="SO">SOMALIA</option>
+	<option value="ZA">SOUTH AFRICA</option>
+	<option value="GS">SOUTH GEORGIA AND THE SOUTH SANDWICH ISLANDS</option>
+	<option value="ES">SPAIN</option>
+	<option value="LK">SRI LANKA</option>
+	<option value="SD">SUDAN</option>
+	<option value="SR">SURINAME</option>
+	<option value="SJ">SVALBARD AND JAN MAYEN ISLANDS</option>
+	<option value="SZ">SWAZILAND</option>
+	<option value="SE">SWEDEN</option>
+	<option value="CH">SWITZERLAND</option>
+	<option value="SY">SYRIAN ARAB REPUBLIC</option>
+	<option value="TW">TAIWAN</option>
+	<option value="TJ">TAJIKISTAN</option>
+	<option value="TH">THAILAND</option>
+	<option value="TL">TIMOR-LESTE</option>
+	<option value="TG">TOGO</option>
+	<option value="TK">TOKELAU</option>
+	<option value="TO">TONGA</option>
+	<option value="TT">TRINIDAD AND TOBAGO</option>
+	<option value="TN">TUNISIA</option>
+	<option value="TR">TURKEY</option>
+	<option value="TM">TURKMENISTAN</option>
+	<option value="TC">TURKS AND CAICOS ISLANDS</option>
+	<option value="TV">TUVALU</option>
+	<option value="UG">UGANDA</option>
+	<option value="UA">UKRAINE</option>
+	<option value="AE">UNITED ARAB EMIRATES</option>
+	<option value="GB">UNITED KINGDOM</option>
+	<option value="US">UNITED STATES</option>
+	<option value="UM">UNITED STATES MINOR OUTLYING ISLANDS</option>
+	<option value="UY">URUGUAY</option>
+	<option value="UZ">UZBEKISTAN</option>
+	<option value="VU">VANUATU</option>
+	<option value="VE">VENEZUELA</option>
+	<option value="VN">VIET NAM</option>
+	<option value="WF">WALLIS AND FUTUNA ISLANDS</option>
+	<option value="EH">WESTERN SAHARA</option>
+	<option value="YE">YEMEN</option>
+	<option value="ZM">ZAMBIA</option>
+	<option value="ZW">ZIMBABWE</option>
+</select>
+ </div>
+ </div>
+ </div>
+
+ <div class="form-group">
+ <label for="username" class="cols-sm-2 control-label">About Work</label>
+ <div class="cols-sm-10">
+ <div class="input-group">
+ <span class="input-group-addon"><i class="fa fa-leanpub" aria-hidden="true"></i></span>
+ <input type="text" class="form-control" name="name" id="name" placeholder=" Applying For Position"/>
+ </div>
+ </div>
+ </div>
+
+ <div class="form-group">
+ <div class="cols-sm-10">
+ <div class="input-group">
+ <span class="input-group-addon"><i class="fa fa-leanpub" aria-hidden="true"></i></span>
+ <select class="form-control">
+ <option>Type of Work</option>
+ <option>Permanent</option>
+ <option>Temporery</option>
+ <option>Both</option>
+ </select>
+ </div>
+ </div>
+ </div>
+
+ <div class="form-group">
+ <div class="cols-sm-10">
+ <div class="input-group">
+ <span class="input-group-addon"><i class="fa fa-envelope-open" aria-hidden="true"></i></span>
+ <input type="text" class="form-control" name="name" id="name" placeholder=" Cover Letter or Additional Information:
+
+"/>
+ </div>
+ </div>
+ </div>
 
 
-                <form action="../submit" id="formentry" class="form-horizontal" role="form" data-parsley-validate novalidate>
-                    <div class="container-fluid shadow">
-                        <div class="row">
-                            <div id="valErr" class="row viewerror clearfix hidden">
-                                <div class="alert alert-danger">Oops! Seems there are some errors..</div>
-                            </div>
-                            <div id="valOk" class="row viewerror clearfix hidden">
-                                <div class="alert alert-success">Yay! ..</div>
-                            </div>
-
-
-                                        <div class="row">
-                                            <div class="col-md-12"><div class="form-group brdbot">
-    			    <h4>Name:</h4>
-    			    <div class="controls col-sm-9">
-
-                    <p id="field3" data-default-label="Header" data-default-is-header="true" data-control-type="header"></p><span id="errId1" class="error"></span></div>
-
-    		</div><div class="row"><div class="col-md-6"><div class="form-group" style="display: block;">
-    			    <label class="control-label control-label-left col-sm-3" for="FirstName">First name<span class="req"> *</span></label>
-    			    <div class="controls col-sm-9">
-
-                    <input id="FirstName" type="text" class="form-control k-textbox" data-role="mask" required="required" data-parsley-errors-container="#errId2"><span id="errId2" class="error"></span></div>
-
-    		</div></div><div class="col-md-6"><div class="form-group" style="display: block;">
-    			    <label class="control-label control-label-left col-sm-3" for="LastName">Last name<span class="req"> *</span></label>
-    			    <div class="controls col-sm-9">
-
-                    <input id="LastName" type="text" class="form-control k-textbox" data-role="text" required="required" data-parsley-errors-container="#errId3"><span id="errId3" class="error"></span></div>
-
-    		</div></div></div><div class="form-group">
-    			    <label class="control-label control-label-left col-sm-3" for="EmailAddress:">Email Address:<span class="req"> *</span></label>
-    			    <div class="controls col-sm-9">
-
-                    <input id="EmailAddress:" type="text" class="form-control k-textbox" data-role="text" placeholder="ex.myname@example.com" required="required" data-parsley-errors-container="#errId4"><span id="errId4" class="error"></span></div>
-
-    		</div><div class="form-group">
-    			    <label class="control-label control-label-left col-sm-3" for="ContactNumber:">Contact Number:<span class="req"> *</span></label>
-    			    <div class="controls col-sm-9">
-
-                    <input id="ContactNumber:" type="text" class="form-control k-textbox" data-role="text" required="required" placeholder="(___) __ __ __" data-parsley-errors-container="#errId5"><span id="errId5" class="error"></span></div>
-
-    		</div><div class="form-group brdbot">
-    			    <h4>Address:</h4>
-    			    <div class="controls col-sm-9">
-
-                    <p id="field20" data-default-label="Header" data-default-is-header="true" data-control-type="header"></p><span id="errId6" class="error"></span></div>
-
-    		</div><div class="form-group">
-    			    <label class="control-label control-label-left col-sm-3" for="StreetAddress">Street Address<span class="req"> *</span></label>
-    			    <div class="controls col-sm-9">
-
-                    <input id="StreetAddress" type="text" class="form-control k-textbox" data-role="text" required="required" data-parsley-errors-container="#errId7"><span id="errId7" class="error"></span></div>
-
-    		</div><div class="form-group">
-    			    <label class="control-label control-label-left col-sm-3" for="StreetAddressLine2">Street Address Line 2</label>
-    			    <div class="controls col-sm-9">
-
-                    <input id="StreetAddressLine2" type="text" class="form-control k-textbox" data-role="text" data-parsley-errors-container="#errId8"><span id="errId8" class="error"></span></div>
-
-    		</div></div>
-                                        </div>
-                                    <div class="row"><div class="col-md-6"><div class="form-group">
-    			    <label class="control-label control-label-left col-sm-3" for="City">City<span class="req"> *</span></label>
-    			    <div class="controls col-sm-9">
-
-                    <input id="City" type="text" class="form-control k-textbox" data-role="text" required="required" data-parsley-errors-container="#errId9"><span id="errId9" class="error"></span></div>
-
-    		</div><div class="form-group">
-    			    <label class="control-label control-label-left col-sm-3" for="Postal/ZipCode">Postal / Zip Code<span class="req"> *</span></label>
-    			    <div class="controls col-sm-9">
-
-                    <input id="Postal/ZipCode" type="text" class="form-control k-textbox" data-role="text" required="required" data-parsley-errors-container="#errId10"><span id="errId10" class="error"></span></div>
-
-    		</div></div><div class="col-md-6"><div class="form-group">
-    			    <label class="control-label control-label-left col-sm-3" for="State/Province">State / Province</label>
-    			    <div class="controls col-sm-9">
-
-                    <input id="State/Province" type="text" class="form-control k-textbox" data-role="text" data-parsley-errors-container="#errId11"><span id="errId11" class="error"></span></div>
-
-    		</div><div class="form-group">
-    			    <label class="control-label control-label-left col-sm-3" for="Country">Country<span class="req"> *</span></label>
-    			    <div class="controls col-sm-9">
-
-                    <select id="Country" class="form-control" data-role="select" selected="selected" required="required" data-parsley-errors-container="#errId12">
+ <div class="form-group">
+ <h2> Upload Resume</h2>
 
 
 
+     <div class="form-group">
+
+         <input type="file" id="BSbtninfo">
+     </div>
+
+ </div>
+ <script>
+ 			$('#BSbtndanger').filestyle({
+ 				buttonName : 'btn-danger',
+                 buttonText : ' File selection'
+ 			});
+ 			$('#BSbtnsuccess').filestyle({
+ 				buttonName : 'btn-success',
+                 buttonText : ' Open'
+ 			});
+ 			$('#BSbtninfo').filestyle({
+ 				buttonName : 'btn-info',
+                 buttonText : ' Select a File'
+ 			});
+ </script>
 
 
-    		<option value="Afghanistan">Afghanistan</option><option value="Albania">Albania</option><option value="Andorra">Andorra</option><option value="Angola">Angola</option><option value="Antigua and Barbuda">Antigua and Barbuda</option><option value="Argentina">Argentina</option><option value="Armenia">Armenia</option><option value="Australia">Australia</option><option value="Austria">Austria</option><option value="Austrian Empire">Austrian Empire</option><option value="Azerbaijan">Azerbaijan</option><option value="Bahrain">Bahrain</option><option value="Bangladesh">Bangladesh</option><option value="Barbados">Barbados</option><option value="Bavaria*">Bavaria*</option><option value="Belarus">Belarus</option><option value="Belgium">Belgium</option><option value="Belize">Belize</option><option value="Benin (Dahomey)">Benin (Dahomey)</option><option value="Bolivia">Bolivia</option><option value="Bosnia and Herzegovina">Bosnia and Herzegovina</option><option value="Botswana">Botswana</option><option value="Brazil">Brazil</option><option value="Brunei">Brunei</option><option value="Brunswick and L?neburg">Brunswick and L?neburg</option><option value="Bulgaria">Bulgaria</option><option value="Burkina Faso (Upper Volta)">Burkina Faso (Upper Volta)</option><option value="Burma">Burma</option><option value="Burundi">Burundi</option><option value="Cabo Verde">Cabo Verde</option><option value="Cambodia">Cambodia</option><option value="Cameroon">Cameroon</option><option value="Canada">Canada</option><option value="Central African Republic">Central African Republic</option><option value="Central American Federation*">Central American Federation*</option><option value="Chad">Chad</option><option value="Chile">Chile</option><option value="China">China</option><option value="Colombia">Colombia</option><option value="Comoros">Comoros</option><option value="Costa Rica">Costa Rica</option><option value="Cote d’Ivoire (Ivory Coast)">Cote d’Ivoire (Ivory Coast)</option><option value="Croatia">Croatia</option><option value="Cuba">Cuba</option><option value="Cyprus">Cyprus</option><option value="Czechia">Czechia</option><option value="Czechoslovakia">Czechoslovakia</option><option value="Option 1">Option 1</option><option value="Option 2">Option 2</option><option value="Option 3">Option 3</option><option value="Option 4">Option 4</option></select><span id="errId12" class="error"></span></div>
+ <div class="form-group ">
+ <a href="#" target="_blank" type="button" id="button" class="btn btn-primary btn-lg btn-block login-button">Register</a>
+ </div>
 
-    		</div></div></div><div class="row"><div class="col-md-12"><div class="form-group">
-    			    <label class="control-label control-label-left col-sm-3" for="ApplyingForPosition:">Applying For Position:</label>
-    			    <div class="controls col-sm-9">
-
-                    <input id="ApplyingForPosition:" type="text" class="form-control k-textbox" data-role="text" data-parsley-errors-container="#errId13"><span id="errId13" class="error"></span></div>
-
-    		</div><div class="form-group">
-    			    <label class="control-label control-label-left col-sm-3" for="TypeOfWork">Type Of Work</label>
-    			    <div class="controls col-sm-9">
-
-                    <select id="TypeOfWork" class="form-control" data-role="select" selected="selected" data-parsley-errors-container="#errId14">
-
-
-
-
-
-    		<option value="Permanent">Permanent</option><option value="Temporery">Temporery</option><option value="Both">Both</option></select><span id="errId14" class="error"></span></div>
-
-    		</div><div class="row"><div class="col-md-2"><div class="form-group">
-    			    <p>Cover Letter or Additional Information:</p>
-
-
-    		</div></div><div class="col-md-10"><div class="form-group">
-    			    <label class="control-label sr-only" for="field140"></label>
-    			    <div class="controls">
-
-                    <textarea id="field140" rows="3" class="form-control k-textbox" data-role="textarea" data-parsley-errors-container="#errId15"></textarea><span id="errId15" class="error"></span></div>
-
-    		</div></div></div><div class="form-group brdbot">
-    			    <h4>Upload Resume:</h4>
-    			    <div class="controls col-sm-9">
-
-                    <p id="field139" data-default-label="Header" data-default-is-header="true" data-control-type="header"></p><span id="errId16" class="error"></span></div>
-
-    		</div><div class="form-group group-inline btn-group">
-
-
-
-          <li class="form-line" data-type="control_fileupload" id="id_13">
-            <label class="form-label form-label-left" id="label_13" for="input_13"> Upload Resume: </label>
-            <div id="cid_13" class="form-input">
-              <input type="file" id="input_13" name="q13_uploadResume" class="form-upload validate[upload]" data-imagevalidate="yes" data-file-accept="pdf, doc, docx, xls, csv, txt, rtf, html, zip, mp3, wma, mpg, flv, avi, jpg, jpeg, png, gif" data-file-maxsize="500" data-file-minsize="0" data-file-limit="0" data-component="fileupload">
-            </div>
-          </li> </div></div></div>
-
-
-                </form>
-            </div>
-        </div>
-
-
-
-
-        <script src="http://cdn.kendostatic.com/2014.1.318/js/jquery.min.js"></script>
-        <script src="http://protostrap.com/Assets/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
-        <script src="http://wenzhixin.net.cn/p/bootstrap-table/src/bootstrap-table.js" type="text/javascript"></script>
-
-        <script src="http://protostrap.com/Assets/inputmask/js/jquery.inputmask.js" type="text/javascript"></script>
-        <script src="http://cdn.kendostatic.com/2014.1.318/js/kendo.all.min.js"></script>
-        <script src="http://protostrap.com/Assets/parsely/parsley.extend.js" type="text/javascript"></script>
-        <script src="http://protostrap.com/Assets/parsely/2.0/parsley.js" type="text/javascript"></script>
-        <script src="http://protostrap.com/Assets/download.js" type="text/javascript"></script>
-        <script src="http://protostrap.com/Assets/protostrap.js" type="text/javascript"></script>
-
-
-      <script>
-      JotForm.showJotFormPowered = "new_footer";
-      </script>
-      <input type="hidden" id="simple_spc" name="simple_spc" value="90801509762357-90801509762357">
-      <script type="text/javascript">
-      document.getElementById("si" + "mple" + "_spc").value = "90801509762357-90801509762357";
-      </script>
-<img id="event_tracking_image" src="./Online Staff Registration Form_files/saved_resource" alt="jftr" width="1" height="1" style="display: none;">
-
-    </body></html>
-
+ </form>
+ </div>
+ </div>
+    </div>
     <!-- register-1 end -->
 
     <!-- footer begin-->
@@ -447,17 +713,6 @@
         </div>
     </div>
     <!-- footer end -->
-    <style type="text/css">
-
-    </style>
-
-    <style type="text/css" id="form-designer-style">
-        /* Injected CSS Code */
-    /*PREFERENCES STYLE*/
-
-      /*PREFERENCES STYLE*//*__INSPECT_SEPERATOR__*/
-        /* Injected CSS Code */
-    </style>
 
     <!-- jquery -->
     <script src="assets/js/jquery-3.3.1.min.js"></script>
