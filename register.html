@@ -27,6 +27,7 @@
     <link rel="stylesheet" href="assets/css/responsive.css">
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script type="text/javascript" src="https://www.jquery-az.com/boots/js/bootstrap-filestyle.min.js"> </script>
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/file-upload-with-preview@3.2.9/dist/file-upload-with-preview.min.css">
 
 </head>
 
@@ -174,7 +175,7 @@
     <!-- register-1 begin-->
 
 <h1 align="center">Online Staff Registration Form</h1>
-<div class="login register">
+<div class="form-group register">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" />
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
 
@@ -183,7 +184,8 @@
   margin-bottom: 15px;
   }
   label{
-   margin-bottom: 15px;
+   margin-top: 15px;
+
   }
   input,
   input::-webkit-input-placeholder {
@@ -234,6 +236,155 @@
   .login-button{
   margin-top: 5px;
   }
+
+  .file-upload-r{
+
+    margin-left: 45%;
+    height:50px;
+    width:50px;
+    border-radius: 500px;
+    position:relative;
+
+    display:flex;
+    justify-content:center;
+    align-items: center;
+
+    border:4px solid #FFFFFF;
+    overflow:hidden;
+    background-image: linear-gradient(to bottom, #050569 50%, #FFFFFF 50%);
+    background-size: 100% 200%;
+    transition: all 1s;
+    color: #FFFFFF;
+    font-size:50px;
+}
+    input[type='file']{
+
+      height:100px;
+      width:100px;
+      position:absolute;
+      top:0;
+      left:0;
+      opacity:0;
+      cursor:pointer;
+
+    }
+
+    &:hover{
+
+      background-position: 0 -100%;
+
+      color:#2590EB;
+
+    }
+    .file-upload {
+  background-color: #ffffff;
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+}
+    .file-upload-btn {
+      width: 100%;
+      margin: 0;
+      color: #fff;
+      background: #050569;
+      border: none;
+      padding: 10px;
+      border-radius: 4px;
+      border-bottom: 4px solid #050569;
+      transition: all .2s ease;
+      outline: none;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+
+    .file-upload-btn:hover {
+  background: #050569;
+  color: #ffffff;
+  transition: all .2s ease;
+  cursor: pointer;
+}
+
+.file-upload-btn:active {
+  border: 0;
+  transition: all .2s ease;
+}
+
+.file-upload-content {
+  display: none;
+  text-align: center;
+}
+
+.file-upload-input {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  outline: none;
+  opacity: 0;
+  cursor: pointer;
+}
+.image-upload-wrap {
+  margin-top: 20px;
+  border: 4px dashed #050569;
+  position: relative;
+}
+.image-dropping,
+.image-upload-wrap:hover {
+  background-color: #9999ea;
+  border: 4px dashed #ffffff;
+}
+
+.image-title-wrap {
+  padding: 0 15px 15px 15px;
+  color: #222;
+}
+.drag-text {
+  text-align: center;
+}
+
+.drag-text h3 {
+  font-weight: 100;
+  text-transform: uppercase;
+  color: #000050;
+  padding: 60px 0;
+}
+.file-upload-image {
+  max-height: 200px;
+  max-width: 200px;
+  margin: auto;
+  padding: 20px;
+}
+.remove-image {
+  width: 200px;
+  margin: 0;
+  color: #fff;
+  background: #cd4535;
+  border: none;
+  padding: 10px;
+  border-radius: 4px;
+  border-bottom: 4px solid #b02818;
+  transition: all .2s ease;
+  outline: none;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.remove-image:hover {
+  background: #c13b2a;
+  color: #ffffff;
+  transition: all .2s ease;
+  cursor: pointer;
+}
+
+.remove-image:active {
+  border: 0;
+  transition: all .2s ease;
+}
+
+
+
+
   </style>
 
  <div class="container">
@@ -243,15 +394,15 @@
 
  <div class="form-group">
  <label for="name" class="cols-sm-2 control-label">Your Name</label>
- <div class="row">
-     <div class="col">
+ <div class="row form-group">
+     <div class="col-12 col-sm-6 form-group">
        <div class="input-group col-sm">
        <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
        <input type="text" class="form-control" name="name" id="name" placeholder=" First Name"/>
 
        </div>
      </div>
-     <div class="col">
+     <div class="col-12 col-sm-6">
        <div class="input-group col-sm">
        <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
        <input type="text" class="form-control" name="name" id="name" placeholder="Last Name"/>
@@ -261,7 +412,7 @@
 
  </div>
  <div class="row">
-     <div class="col">
+     <div class="col-12 col-sm-6">
        <div class="form-group">
        <label for="email" class="cols-sm-2 control-label">Your Email</label>
        <div class="cols-sm-10">
@@ -272,7 +423,7 @@
        </div>
        </div>
      </div>
-     <div class="col">
+     <div class="col-12 col-sm-6">
        <div class="form-group">
        <label for="email" class="cols-sm-2 control-label">Contact Number</label>
        <div class="cols-sm-10">
@@ -289,13 +440,13 @@
  <label for="name" class="cols-sm-2 control-label">Address</label>
  <div class="row">
 
-    <div class="col">
+    <div class="col-12 col-sm-6 form-group">
       <div class="input-group">
       <span class="input-group-addon"><i class="fa fa-address-card" aria-hidden="true"></i></span>
       <input type="text" class="form-control" name="name" id="name" placeholder=" Street Address"/>
       </div>
     </div>
-    <div class="col">
+    <div class="col-12 col-sm-6 ">
       <div class="input-group">
       <span class="input-group-addon"><i class="fa fa-address-card" aria-hidden="true"></i></span>
       <input type="text" class="form-control" name="name" id="name" placeholder="City"/>
@@ -305,8 +456,8 @@
  </div>
  </div>
 
- <div class="row">
-     <div class="col">
+ <div class="row form-group">
+     <div class="col-12 col-sm-6 form-group">
        <div class="input-group">
        <span class="input-group-addon"><i class="fa fa-address-card" aria-hidden="true"></i></span>
        <input type="text" class="form-control" name="name" id="name" placeholder="State / Province"/>
@@ -317,8 +468,6 @@
        <span class="input-group-addon"><i class="fa fa-globe" aria-hidden="true"></i></span>
 
        <select class="form-control" id="select">
-        <option selected value="NL">NETHERLANDS</option>
-       	<option value="AN">NETHERLANDS ANTILLES</option>
       	<option value="AX">AALAND ISLANDS</option>
       	<option value="AF">AFGHANISTAN</option>
       	<option value="AL">ALBANIA</option>
@@ -456,6 +605,8 @@
       	<option value="MM">MYANMAR</option>
       	<option value="NA">NAMIBIA</option>
       	<option value="NR">NAURU</option>
+        <option selected value="NL">NETHERLANDS</option>
+        <option value="AN">NETHERLANDS ANTILLES</option>
       	<option value="NP">NEPAL</option>
       	<option value="NC">NEW CALEDONIA</option>
       	<option value="NZ">NEW ZEALAND</option>
@@ -549,13 +700,13 @@
  <div class="form-group">
       <label for="username" class="cols-sm-2 control-label">About Work</label>
       <div class="row">
-    <div class="col">
+    <div class="col-12 col-sm-6 form-group">
       <div class="input-group">
       <span class="input-group-addon"><i class="fa fa-leanpub" aria-hidden="true"></i></span>
       <input type="text" class="form-control" name="name" id="name" placeholder=" Applying For Position"/>
       </div>
     </div>
-    <div class="col">
+    <div class="col-12 col-sm-6">
       <div class="input-group">
       <span class="input-group-addon"><i class="fa fa-leanpub" aria-hidden="true"></i></span>
       <select class="form-control">
@@ -574,8 +725,8 @@
 
 
  <div class="form-group">
- <div class="cols-sm-10">
- <div class="input-group">
+ <div class="cols-sm-10 ">
+ <div class="input-group form-group  ">
  <span class="input-group-addon"><i class="fa fa-envelope-open" aria-hidden="true"></i></span>
 <textarea class="form-control" name="name" placeholder="Cover Letter or Additional Information"></textarea>
 
@@ -588,31 +739,91 @@
  </div>
 
 
- <div class="form-group">
- <h4> Upload Photo</h4>
 
 
 
-     <div class="form-group">
+ <div class="custom-file-container" data-upload-id="myUniqueUploadId">
+     <label>Upload Photo <a href="javascript:void(0)" class="custom-file-container__image-clear" title="Clear Image">&times;</a>
+     </label>
 
-         <input type="file" id="BSbtninfo">
-     </div>
 
- </div>
+
+
+
+
+ <script src="https://unpkg.com/-with-preview@3.2.9/dist/-with-preview.min.js"></script>
  <script>
- 			$('#BSbtndanger').filestyle({
- 				buttonName : 'btn-danger',
-                 buttonText : ' File selection'
- 			});
- 			$('#BSbtnsuccess').filestyle({
- 				buttonName : 'btn-success',
-                 buttonText : ' Open'
- 			});
- 			$('#BSbtninfo').filestyle({
- 				buttonName : 'btn-info',
-                 buttonText : ' Select a File'
- 			});
+     var upload = new FileUploadWithPreview('myUniqueUploadId', {showDeleteButtonOnImages: true, text: {chooseFile: 'Custom Placeholder Copy', browse: 'Custom Button Copy'}})
  </script>
+ </div>
+
+
+ <script class="jsbin" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<div class="file-upload">
+  <button class="file-upload-btn" type="button" onclick="$('.file-upload-input').trigger( 'click' )">Add Image</button>
+
+  <div class="image-upload-wrap">
+    <input class="file-upload-input" type='file' onchange="readURL(this);" accept="image/*" />
+    <div class="drag-text">
+      <h3>Drag and drop a file or select add Image</h3>
+    </div>
+  </div>
+  <div class="file-upload-content">
+    <img class="file-upload-image" src="#" alt="your image" />
+    <div class="image-title-wrap">
+      <button type="button" onclick="removeUpload()" class="remove-image">Remove <span class="image-title">Uploaded Image</span></button>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript">
+function readURL(input) {
+if (input.files && input.files[0]) {
+
+  var reader = new FileReader();
+
+  reader.onload = function(e) {
+    $('.image-upload-wrap').hide();
+
+    $('.file-upload-image').attr('src', e.target.result);
+    $('.file-upload-content').show();
+
+    $('.image-title').html(input.files[0].name);
+  };
+
+  reader.readAsDataURL(input.files[0]);
+
+} else {
+  removeUpload();
+}
+}
+
+function removeUpload() {
+$('.file-upload-input').replaceWith($('.file-upload-input').clone());
+$('.file-upload-content').hide();
+$('.image-upload-wrap').show();
+}
+$('.image-upload-wrap').bind('dragover', function () {
+      $('.image-upload-wrap').addClass('image-dropping');
+  });
+  $('.image-upload-wrap').bind('dragleave', function () {
+      $('.image-upload-wrap').removeClass('image-dropping');
+});
+
+</script>
+
+
+ <div class="form-group">
+      <label for="username" class="cols-sm-2 control-label">Upload Resume</label>
+</div>
+
+ <div class="wrapper">
+   <div class="file-upload-r">
+     <input type="file" />
+     <i class="fa fa-arrow-up"></i>
+   </div>
+ </div>
+
 
  <div class="row">
      <div class="col">
@@ -631,7 +842,7 @@
  </div>
  </div>
  </div>
- 
+
 
 
 
