@@ -28,10 +28,16 @@
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script type="text/javascript" src="https://www.jquery-az.com/boots/js/bootstrap-filestyle.min.js"> </script>
     <link rel="stylesheet" type="text/css" href="https://unpkg.com/file-upload-with-preview@3.2.9/dist/file-upload-with-preview.min.css">
+<script src="https://cdn.rawgit.com/PascaleBeier/bootstrap-validate/v2.2.0/dist/bootstrap-validate.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.2/css/bootstrap.min.css">
+<link rel="stylesheet" href="/vendors/formvalidation/dist/css/formValidation.min.css">
 
 </head>
 
 <body>
+
+
+
     <!-- preloader begin-->
     <div class="sec">
         <div class="loader">
@@ -179,238 +185,227 @@
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" />
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
 
-  <style>
-  .form-group{
-  margin-bottom: 15px;
-  }
-  label{
-   margin-top: 15px;
+      <style>
+      .form-group{
+      margin-bottom: 15px;
+      }
+      label{
+       margin-top: 0px;
+      }
 
+      input,
+      input::-webkit-input-placeholder {
+       font-size: 11px;
+       padding-top: 3px;
+      }
+      .form-control {
+       height: auto!important;
+      padding: 8px 12px !important;
+      }
+      .input-group {
+       box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.21)!important;
+      }
+      #button {
+        border: 1px solid #ccc;
+        margin-top: 28px;
+        padding: 6px 12px;
+        color: #fff;
+        text-shadow: 0 1px #fff;
+        cursor: pointer;
+        border-radius: 3px 3px;
+        box-shadow: 0 1px #fff inset, 0 1px #ddd;
+        background: #f5f5f5;
+      background-image: background-image: background: -webkit-linear-gradient(#f5f5f5 0%, #eeeeee 100%);
+      background-image: background-image: background: -o-linear-gradient(#f5f5f5 0%, #eeeeee 100%);
+      background-image: background-image: background: linear-gradient(#f5f5f5 0%, #eeeeee 100%);
+      background-image: background: -o-linear-gradient(#f5f5f5 0%, #eeeeee 100%);
+      background-image: background: linear-gradient(#f5f5f5 0%, #eeeeee 100%);
+      background: -o-linear-gradient(#f5f5f5 0%, #eeeeee 100%);
+      background: linear-gradient(#f5f5f5 0%, #eeeeee 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f5f5f5', endColorstr='#eeeeee', GradientType=0);
+      }
+      .main-form{
+       margin-top: 10px;
+margin: 0px auto;
+      margin-bottom: 30px;
+       max-width: 800px;
+       padding: 10px 40px;
+        background:#4b5380;
+        color: #FFF;
+        text-shadow: none;
+        box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.31);
+        text-align:center
+        }
+        span.input-group-addon i {
+         color: #009edf;
+         font-size: 17px;
+        }
+      .login-button{
+      margin-top: 5px;
+      }
+
+      .file-upload {
+    background-color: #ffffff;
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
   }
-  input,
-  input::-webkit-input-placeholder {
-   font-size: 11px;
-   padding-top: 3px;
-  }
-  .form-control {
-   height: auto!important;
-  padding: 8px 12px !important;
-  }
-  .input-group {
-   box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.21)!important;
-  }
-  #button {
-    border: 1px solid #ccc;
-    margin-top: 28px;
-    padding: 6px 12px;
-    color: #666;
-    text-shadow: 0 1px #fff;
+      .file-upload-btn {
+        width: 100%;
+        margin: 0;
+        color: #fff;
+        background: #050569;
+        border: none;
+        padding: 10px;
+        border-radius: 4px;
+        border-bottom: 4px solid #050569;
+        transition: all .2s ease;
+        outline: none;
+        text-transform: uppercase;
+        font-weight: 700;
+      }
+      .file-upload-btn:hover {
+    background: #050569;
+    color: #ffffff;
+    transition: all .2s ease;
     cursor: pointer;
-    border-radius: 3px 3px;
-    box-shadow: 0 1px #fff inset, 0 1px #ddd;
-    background: #f5f5f5;
-  background-image: background-image: background: -webkit-linear-gradient(#f5f5f5 0%, #eeeeee 100%);
-  background-image: background-image: background: -o-linear-gradient(#f5f5f5 0%, #eeeeee 100%);
-  background-image: background-image: background: linear-gradient(#f5f5f5 0%, #eeeeee 100%);
-  background-image: background: -o-linear-gradient(#f5f5f5 0%, #eeeeee 100%);
-  background-image: background: linear-gradient(#f5f5f5 0%, #eeeeee 100%);
-  background: -o-linear-gradient(#f5f5f5 0%, #eeeeee 100%);
-  background: linear-gradient(#f5f5f5 0%, #eeeeee 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f5f5f5', endColorstr='#eeeeee', GradientType=0);
   }
-.main-form{
- margin-top: 30px;
- margin: 0 auto;
- max-width: 800px;
- padding: 10px 40px;
-  background:#4b5380;
-  color: #FFF;
-  text-shadow: none;
-  box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.31);
-  text-align:center
+  .file-upload-btn:active {
+    border: 0;
+    transition: all .2s ease;
   }
-  span.input-group-addon i {
-   color: #009edf;
-   font-size: 17px;
+  .file-upload-content {
+    display: none;
+    text-align: center;
   }
-  .login-button{
-  margin-top: 5px;
+  .file-upload-input {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    outline: none;
+    opacity: 0;
+    cursor: pointer;
   }
-
-  .file-upload-r{
-
-    margin-left: 45%;
-    height:50px;
-    width:50px;
-    border-radius: 500px;
-    position:relative;
-
-    display:flex;
-    justify-content:center;
-    align-items: center;
-
-    border:4px solid #FFFFFF;
-    overflow:hidden;
-    background-image: linear-gradient(to bottom, #050569 50%, #FFFFFF 50%);
-    background-size: 100% 200%;
-    transition: all 1s;
-    color: #FFFFFF;
-    font-size:50px;
-}
-    input[type='file']{
-
-      height:100px;
-      width:100px;
-      position:absolute;
-      top:0;
-      left:0;
-      opacity:0;
-      cursor:pointer;
-
-    }
-
-    &:hover{
-
-      background-position: 0 -100%;
-
-      color:#2590EB;
-
-    }
-    .file-upload {
-  background-color: #ffffff;
-  width: 100%;
-  margin: 0 auto;
-  padding: 20px;
-}
-    .file-upload-btn {
-      width: 100%;
+  .image-upload-wrap {
+    margin-top: 20px;
+    border: 4px dashed #050569;
+    position: relative;
+  }
+  .image-dropping,
+  .image-upload-wrap:hover {
+    background-color: #9999ea;
+    border: 4px dashed #ffffff;
+  }
+  .image-title-wrap {
+    padding: 0 15px 15px 15px;
+    color: #222;
+  }
+  .drag-text {
+    text-align: center;
+  }
+  .drag-text h3 {
+    font-weight: 100;
+    text-transform: uppercase;
+    color: #000050;
+    padding: 60px 0;
+  }
+  .file-upload-image {
+    max-height: 200px;
+    max-width: 200px;
+    margin: auto;
+    padding: 20px;
+  }
+    .remove-image {
+      width: 200px;
       margin: 0;
       color: #fff;
-      background: #050569;
+      background: #cd4535;
       border: none;
       padding: 10px;
       border-radius: 4px;
-      border-bottom: 4px solid #050569;
+      border-bottom: 4px solid #b02818;
       transition: all .2s ease;
       outline: none;
       text-transform: uppercase;
       font-weight: 700;
     }
+    .remove-image:hover {
+      background: #c13b2a;
+      color: #ffffff;
+      transition: all .2s ease;
+      cursor: pointer;
+    }
+    .remove-image:active {
+      border: 0;
+      transition: all .2s ease;
+    }
 
-    .file-upload-btn:hover {
-  background: #050569;
-  color: #ffffff;
-  transition: all .2s ease;
-  cursor: pointer;
-}
-
-.file-upload-btn:active {
-  border: 0;
-  transition: all .2s ease;
-}
-
-.file-upload-content {
-  display: none;
-  text-align: center;
-}
-
-.file-upload-input {
-  position: absolute;
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  height: 100%;
-  outline: none;
-  opacity: 0;
-  cursor: pointer;
-}
-.image-upload-wrap {
-  margin-top: 20px;
-  border: 4px dashed #050569;
-  position: relative;
-}
-.image-dropping,
-.image-upload-wrap:hover {
-  background-color: #9999ea;
-  border: 4px dashed #ffffff;
+  }
+  @media screen and (min-width: 765px) {
+.main-form{
+  margin: 0px auto;
 }
 
-.image-title-wrap {
-  padding: 0 15px 15px 15px;
-  color: #222;
-}
-.drag-text {
-  text-align: center;
+  .btnfull{
+    height: 228px;
+    margin: 20px
+  }
 }
 
-.drag-text h3 {
-  font-weight: 100;
-  text-transform: uppercase;
-  color: #000050;
-  padding: 60px 0;
-}
-.file-upload-image {
-  max-height: 200px;
-  max-width: 200px;
-  margin: auto;
-  padding: 20px;
-}
-.remove-image {
-  width: 200px;
-  margin: 0;
-  color: #fff;
-  background: #cd4535;
-  border: none;
-  padding: 10px;
-  border-radius: 4px;
-  border-bottom: 4px solid #b02818;
-  transition: all .2s ease;
-  outline: none;
-  text-transform: uppercase;
-  font-weight: 700;
-}
+@media screen and (min-width: 576px) {
 
-.remove-image:hover {
-  background: #c13b2a;
-  color: #ffffff;
-  transition: all .2s ease;
-  cursor: pointer;
+.btnfull{
+  height: 99%;
+  margin: 20px
 }
-
-.remove-image:active {
-  border: 0;
-  transition: all .2s ease;
 }
+      </style>
 
 
 
-
-  </style>
-
- <div class="container">
- <div class="row main-form justify-content-center">
+ <div class="container ">
+ <div class="row main-form justify-content-center ">
  <form class="" method="post" action="#">
+
 
 
  <div class="form-group">
  <label for="name" class="cols-sm-2 control-label">Your Name</label>
- <div class="row form-group">
+ <div class="row ">
      <div class="col-12 col-sm-6 form-group">
        <div class="input-group col-sm">
        <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
        <input type="text" class="form-control" name="name" id="name" placeholder=" First Name"/>
+<script type="text/javascript">
+bootstrapValidate(
+ '#name',
+ 'required:Enter a valid Name!'
+);
+</script>
 
        </div>
      </div>
      <div class="col-12 col-sm-6">
        <div class="input-group col-sm">
        <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
-       <input type="text" class="form-control" name="name" id="name" placeholder="Last Name"/>
+       <input type="text" class="form-control" name="lastname" id="lastname" placeholder="Last Name"/>
+
+       <script type="text/javascript">
+       bootstrapValidate(
+        '#lastname',
+        'date:Enter a valid Last Name!'
+       );
+       </script>
        </div>
      </div>
 
 
  </div>
+
+
+
  <div class="row">
      <div class="col-12 col-sm-6">
        <div class="form-group">
@@ -419,6 +414,12 @@
        <div class="input-group">
        <span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
        <input type="text" class="form-control" name="email" id="email" placeholder="Enter your Email"/>
+<script type="text/javascript">
+bootstrapValidate(
+ '#email',
+ 'email:Enter a valid E-Mail Address!'
+);
+</script>
        </div>
        </div>
        </div>
@@ -456,7 +457,7 @@
  </div>
  </div>
 
- <div class="row form-group">
+ <div class="row ">
      <div class="col-12 col-sm-6 form-group">
        <div class="input-group">
        <span class="input-group-addon"><i class="fa fa-address-card" aria-hidden="true"></i></span>
@@ -738,91 +739,99 @@
  </div>
  </div>
 
-
-
-
-
- <div class="custom-file-container" data-upload-id="myUniqueUploadId">
-     <label>Upload Photo <a href="javascript:void(0)" class="custom-file-container__image-clear" title="Clear Image">&times;</a>
-     </label>
-
-
-
-
-
-
- <script src="https://unpkg.com/-with-preview@3.2.9/dist/-with-preview.min.js"></script>
- <script>
-     var upload = new FileUploadWithPreview('myUniqueUploadId', {showDeleteButtonOnImages: true, text: {chooseFile: 'Custom Placeholder Copy', browse: 'Custom Button Copy'}})
- </script>
+ <div class="form-group">
+ <h5> Upload Resume</h5>
+     <div class="form-group">
+         <input type="file" id="BSbtninfo">
+     </div>
  </div>
+ <script>
+       $('#BSbtndanger').filestyle({
+         buttonName : 'btn-danger',
+                 buttonText : ' File selection'
+       });
+       $('#BSbtnsuccess').filestyle({
+         buttonName : 'btn-success',
+                 buttonText : ' Open'
+       });
+       $('#BSbtninfo').filestyle({
+         buttonName : 'btn-info',
+                 buttonText : ' Select a File'
+       });
+ </script>
+
+
+  <div class="form-group">
+    <label for="name" class="cols-sm-2 control-label"</label>
+    <div class="row ">
+
+
 
 
  <script class="jsbin" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
-<div class="file-upload">
-  <button class="file-upload-btn" type="button" onclick="$('.file-upload-input').trigger( 'click' )">Add Image</button>
+   <div class="file-upload">
 
-  <div class="image-upload-wrap">
-    <input class="file-upload-input" type='file' onchange="readURL(this);" accept="image/*" />
-    <div class="drag-text">
-      <h3>Drag and drop a file or select add Image</h3>
-    </div>
-  </div>
-  <div class="file-upload-content">
-    <img class="file-upload-image" src="#" alt="your image" />
-    <div class="image-title-wrap">
-      <button type="button" onclick="removeUpload()" class="remove-image">Remove <span class="image-title">Uploaded Image</span></button>
-    </div>
-  </div>
-</div>
+     <script src="https://unpkg.com/-with-preview@3.2.9/dist/-with-preview.min.js"></script>
+     <script>
+       var upload = new FileUploadWithPreview('myUniqueUploadId', {showDeleteButtonOnImages: true, text: {chooseFile: 'Custom Placeholder Copy', browse: 'Custom Button Copy'}})
 
-<script type="text/javascript">
-function readURL(input) {
-if (input.files && input.files[0]) {
-
-  var reader = new FileReader();
-
-  reader.onload = function(e) {
-    $('.image-upload-wrap').hide();
-
-    $('.file-upload-image').attr('src', e.target.result);
-    $('.file-upload-content').show();
-
-    $('.image-title').html(input.files[0].name);
-  };
-
-  reader.readAsDataURL(input.files[0]);
-
-} else {
-  removeUpload();
-}
-}
-
-function removeUpload() {
-$('.file-upload-input').replaceWith($('.file-upload-input').clone());
-$('.file-upload-content').hide();
-$('.image-upload-wrap').show();
-}
-$('.image-upload-wrap').bind('dragover', function () {
-      $('.image-upload-wrap').addClass('image-dropping');
-  });
-  $('.image-upload-wrap').bind('dragleave', function () {
-      $('.image-upload-wrap').removeClass('image-dropping');
-});
-
-</script>
+     </script>
 
 
- <div class="form-group">
-      <label for="username" class="cols-sm-2 control-label">Upload Resume</label>
-</div>
+     <div class="row ">
+         <div class="col-12 col-sm-6 form-group">
+         <button class="file-upload-btn btn-lg btnfull" type="button" onclick="$('.file-upload-input').trigger( 'click' )">Add Image</button>
+         </div>
+         <div class="col-12 col-sm-6">
+           <div class="image-upload-wrap">
+             <input class="file-upload-input" type='file' onchange="readURL(this);" accept="image/*" />
+             <div class="drag-text">
+               <h3>Drag and drop a file or select add Image</h3>
+             </div>
+           </div>
+         </div>
 
- <div class="wrapper">
-   <div class="file-upload-r">
-     <input type="file" />
-     <i class="fa fa-arrow-up"></i>
-   </div>
+
+     </div>
+
+
+
  </div>
+ </div>
+ <script type="text/javascript">
+ function readURL(input) {
+ if (input.files && input.files[0]) {
+   var reader = new FileReader();
+   reader.onload = function(e) {
+     $('.image-upload-wrap').hide();
+     $('.file-upload-image').attr('src', e.target.result);
+     $('.file-upload-content').show();
+     $('.image-title').html(input.files[0].name);
+   };
+   reader.readAsDataURL(input.files[0]);
+ } else {
+   removeUpload();
+ }
+ }
+ function removeUpload() {
+ $('.file-upload-input').replaceWith($('.file-upload-input').clone());
+ $('.file-upload-content').hide();
+ $('.image-upload-wrap').show();
+ }
+ $('.image-upload-wrap').bind('dragover', function () {
+       $('.image-upload-wrap').addClass('image-dropping');
+   });
+   $('.image-upload-wrap').bind('dragleave', function () {
+       $('.image-upload-wrap').removeClass('image-dropping');
+ });
+ </script>
+
+
+
+
+
+
+
 
 
  <div class="row">
@@ -837,7 +846,7 @@ $('.image-upload-wrap').bind('dragover', function () {
        </div>
      </div>
 </div>
-
+ </div>
  </form>
  </div>
  </div>
